@@ -176,6 +176,7 @@ body {
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
+    margin: 54px 0 0 20px;
 }
 
 .restaurant_selection {
@@ -227,3 +228,31 @@ body {
     }
 }
 
+// Footer 
+
+footer {
+    background-color: #353535;
+    padding-bottom: 20px;
+    .logo_footer_img {
+        width: 30%;
+        margin: 25px 0 0 22px;
+    }
+    ul {
+        list-style-type: none;
+        color: #fff;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        li {
+            margin: 7px 0;
+        }
+        .link_svg {
+            display: flex;
+            flex-direction: row;
+            .fa-utensils {
+                margin-right: 11px;
+            }
+        }
+    }
+}

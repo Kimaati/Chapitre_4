@@ -244,15 +244,24 @@ footer {
         font-weight: 500;
         font-size: 16px;
         line-height: 19px;
+        padding-left: 25px;
         li {
             margin: 7px 0;
         }
         .link_svg {
             display: flex;
             flex-direction: row;
-            .fa-utensils {
+            align-items: center;
+            .fa-utensils, 
+            .fa-handshake {
                 margin-right: 11px;
             }
         }
+        .footer_text_bottom {
+            font-weight: 400;
+        }
+    }
+    li:hover {
+        cursor: pointer;
     }
 }

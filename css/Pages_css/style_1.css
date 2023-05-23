@@ -65,14 +65,29 @@ header .fa-arrow-left {
   line-height: 41px;
   text-align: center;
 }
-.container .titre_header1 .fa-heart {
+.container .titre_header1 input {
+  position: absolute;
+  left: -100vw;
+}
+.container .titre_header1 input:checked + label {
+  color: #9356DC;
+}
+.container .titre_header1 label {
+  font-size: 5rem;
+  color: #fff;
+  cursor: pointer;
+}
+.container .titre_header1 label .fa-heart {
   font-size: 30px;
   padding-right: 20px;
+  cursor: pointer;
+  -webkit-text-stroke: 2px black;
 }
-.container .title {
+
+.title {
   margin-left: 13px;
 }
-.container .title .title_menu {
+.title .title_menu {
   font-family: Roboto, sans-serif;
   font-weight: 300;
   font-size: 16px;
@@ -80,7 +95,7 @@ header .fa-arrow-left {
   text-transform: uppercase;
   position: relative;
 }
-.container .title .title_menu .line {
+.title .title_menu .line {
   position: absolute;
   left: 0%;
   right: 85.45%;
@@ -90,10 +105,12 @@ header .fa-arrow-left {
   height: 5px;
   border: 3px solid #99E2D0;
 }
-.container article {
+
+article {
   margin-bottom: 28px;
 }
-.container .card_menu {
+
+.card_menu {
   margin: 0 13px 12px 13px;
   padding: 0 0 14px 15px;
   font-style: normal;
@@ -102,14 +119,14 @@ header .fa-arrow-left {
   line-height: 18px;
   position: relative;
 }
-.container .card_menu .text_bold {
+.card_menu .text_bold {
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
   margin: 12px 0 5px 0;
 }
-.container .card_menu .price {
+.card_menu .price {
   position: absolute;
   right: 14px;
   bottom: 14px;
@@ -155,6 +172,7 @@ footer .logo {
   line-height: 27px;
   color: #fff;
   margin-left: 25px;
+  padding-top: 22px;
 }
 
 ul {

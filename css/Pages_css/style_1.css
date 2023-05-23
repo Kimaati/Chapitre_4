@@ -118,6 +118,7 @@ article {
   font-size: 15px;
   line-height: 18px;
   position: relative;
+  cursor: pointer;
 }
 .card_menu .text_bold {
   font-style: normal;

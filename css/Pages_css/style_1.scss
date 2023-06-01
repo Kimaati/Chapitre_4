@@ -127,8 +127,6 @@ article {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
-
-    border: 2px solid slateblue;
     .card_content {
       height: 85px;
       display: flex;
@@ -178,6 +176,10 @@ article {
     height: 85px;
     transition: 1s;
     width: 0;
+    & > i {
+      opacity: 0;
+      transition: 1s;
+    }
   }
 
   .card_checkbox {
@@ -195,7 +197,6 @@ article {
       width: 69px;
 
       i {
-        transform: rotate(360deg);
         opacity: 1;
       }
     }

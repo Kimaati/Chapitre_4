@@ -126,7 +126,6 @@ article .card {
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
-  border: 2px solid slateblue;
 }
 article .card .card_content {
   height: 85px;
@@ -175,6 +174,10 @@ article .check_animation {
   transition: 1s;
   width: 0;
 }
+article .check_animation > i {
+  opacity: 0;
+  transition: 1s;
+}
 article .card_checkbox {
   display: none;
 }
@@ -185,7 +188,6 @@ article .card_checkbox:checked ~ .check_animation {
   width: 69px;
 }
 article .card_checkbox:checked ~ .check_animation i {
-  transform: rotate(360deg);
   opacity: 1;
 }
 

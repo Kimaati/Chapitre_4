@@ -16,7 +16,7 @@ html {
 .loader {
   width: 100%;
   height: 100vh;
-  background-color: #353535;
+  background: #99e2d0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,16 +62,16 @@ html {
 
 @keyframes flash {
   0% {
-    color: #FFF900;
-    text-shadow: 0 0 7px #fff900;
+    color: #008766;
+    text-shadow: 0 0 7px #008766;
   }
   90% {
     color: #484848;
     text-shadow: none;
   }
   100% {
-    color: #FFF900;
-    text-shadow: 0 0 7px #fff900;
+    color: #008766;
+    text-shadow: 0 0 7px #008766;
   }
 }
 /* Header */
@@ -90,7 +90,7 @@ html {
 }
 
 .location_container {
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   width: 100%;
   height: 50px;
   display: flex;
@@ -156,7 +156,7 @@ html {
 
 .btn {
   padding: 13px 19px;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   border-radius: 25px;
   border: none;
   font-style: normal;
@@ -191,7 +191,7 @@ html {
 }
 
 .container_filters .filter {
-  background: #F7F7F7;
+  background: #f7f7f7;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   display: flex;
@@ -203,7 +203,7 @@ html {
   display: inline-block;
   height: 24px;
   width: 24px;
-  background-color: #9356DC;
+  background-color: #9356dc;
   color: #fff;
   border-radius: 50%;
   text-align: center;
@@ -298,7 +298,7 @@ html {
   cursor: pointer;
 }
 .restaurant_selection span .fa-heart:hover {
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   font-weight: 600;
   color: transparent;
   -webkit-background-clip: text;

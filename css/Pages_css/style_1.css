@@ -11,6 +11,7 @@ body {
   padding: 0;
 }
 
+/* Header */
 header {
   position: relative;
   display: flex;
@@ -65,6 +66,7 @@ header .fa-arrow-left {
   font-weight: 400;
   font-size: 28px;
   line-height: 41px;
+  letter-spacing: 1px;
   text-align: center;
 }
 .container .titre_header1 span {
@@ -88,6 +90,8 @@ header .fa-arrow-left {
 
 .title {
   margin-left: 13px;
+  width: 40px;
+  border-bottom: 3px solid #99e2d0;
 }
 .title .title_menu {
   font-family: Roboto, sans-serif;
@@ -110,32 +114,79 @@ header .fa-arrow-left {
 
 article {
   margin-bottom: 28px;
+  display: grid;
+  gap: 12px;
+  /* Animation sélection */
 }
-
-.card_menu {
-  margin: 0 13px 12px 13px;
-  padding: 0 0 14px 15px;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 15px;
-  line-height: 18px;
-  position: relative;
+article .card {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin: 0 13px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+  border: 2px solid slateblue;
 }
-.card_menu .text_bold {
-  font-style: normal;
+article .card .card_content {
+  height: 85px;
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% - 50px);
+  border-radius: 15px 0 0 15px;
+  transition: 1s;
+}
+article .card .card_content h3 {
+  width: 100%;
+  margin: 15px 0 0 10px;
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
-  margin: 12px 0 5px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-.card_menu .price {
-  position: absolute;
-  right: 14px;
-  bottom: 14px;
-  font-style: normal;
-  font-weight: 700;
+article .card .card_content p {
+  margin: -12px 0 0 10px;
+  font-weight: 300;
+  font-size: 15px;
   line-height: 18px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+article .card_price {
+  width: 50px;
+  padding-top: 28px;
+  padding-right: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  transition: 1s;
+}
+article .check_animation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #99e2d0;
+  font-size: 25px;
+  height: 85px;
+  transition: 1s;
+  width: 0;
+}
+article .card_checkbox {
+  display: none;
+}
+article .card_checkbox:checked ~ .card_content {
+  width: calc(100% - 69px);
+}
+article .card_checkbox:checked ~ .check_animation {
+  width: 69px;
+}
+article .card_checkbox:checked ~ .check_animation i {
+  transform: rotate(360deg);
+  opacity: 1;
 }
 
 /* Bouton de commande */

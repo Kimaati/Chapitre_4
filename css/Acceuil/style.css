@@ -104,6 +104,15 @@ html {
   width: 162px;
 }
 
+/* Media query logo */
+@media screen and (min-width: 1024px) {
+  .logo_container {
+    height: 96px;
+  }
+  .logo_container img {
+    width: 200px !important;
+  }
+}
 .location_container {
   background-color: #eaeaea;
   width: 100%;
@@ -122,6 +131,7 @@ html {
   font-size: 16px;
 }
 
+/* Phrase d'accroche */
 .container_top {
   background-color: #f3f3f3;
   padding: 40px 0 57px 0;
@@ -136,25 +146,20 @@ html {
 }
 .text_top .text_top_h1 {
   display: flex;
-  align-items: center;
-  width: 75%;
-  height: 68px;
-}
-.text_top .text_top_h1 h1 {
   font-style: normal;
   font-weight: 700;
+  font-size: 1.5rem;
   line-height: 28px;
   text-align: center;
+  margin: 0 45px;
 }
 .text_top .text_top_p {
-  width: 85%;
-}
-.text_top .text_top_p p {
   font-style: normal;
   font-weight: 300;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
+  margin: 0 30px;
 }
 
 /* Bouton header */
@@ -191,30 +196,32 @@ html {
 }
 
 /* Fonctionnement */
+.choix_h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 54px 0 0 20px;
+}
+
 .choix_container {
   padding: 20px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  gap: 25px;
 }
-
-.choix-h2 {
-  font-style: italic;
-  font-weight: 900;
-  font-size: large;
-  margin-top: 48px;
+.choix_container .container_filters {
+  margin: 0 0 0 20px;
 }
-
-.container_filters .filter {
+.choix_container .container_filters .filter {
   background: #f7f7f7;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   display: flex;
   padding: 30px;
-  margin: 0 0 25px 0;
   position: relative;
 }
-.container_filters .filter .number {
+.choix_container .container_filters .filter .number {
   display: inline-block;
   height: 24px;
   width: 24px;
@@ -227,23 +234,41 @@ html {
   position: absolute;
   left: -12px;
 }
-.container_filters .filter .text_filter {
+.choix_container .container_filters .filter .text_filter {
   margin-left: 16px;
   font-style: normal;
   font-size: 16px;
   font-weight: 500;
 }
-.container_filters .filter .fa-mobile-screen-button,
-.container_filters .filter .fa-list-ul,
-.container_filters .filter .fa-store {
+.choix_container .container_filters .filter .fa-mobile-screen-button,
+.choix_container .container_filters .filter .fa-list-ul,
+.choix_container .container_filters .filter .fa-store {
   margin-right: 27px;
 }
 
-.last_container {
-  margin-bottom: 68px;
+/* Media query "Fonctionnement" */
+/* Breakpoint dekstop */
+@media screen and (min-width: 1024px) {
+  .choix_h2 {
+    margin: 50px 0 26px 180px;
+  }
+  .choix_container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 37px;
+    width: 100%;
+    padding: 0 180px 50px 180px;
+    justify-content: center;
+  }
+  .choix_container .container_filters {
+    width: 323px;
+    margin: 0;
+  }
+}
+/* Liste restaurants */
+.container_restaurant {
+  background: #f7f7f7;
 }
 
-/* Liste restaurants */
 .h2_restaurant {
   font-style: normal;
   font-weight: 700;
@@ -255,7 +280,7 @@ html {
 .restaurant_selection {
   display: flex;
   flex-direction: column;
-  margin: 20px 18px;
+  margin: 28px 18px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   position: relative;
   height: 251px;
@@ -337,6 +362,29 @@ html {
   margin: 3px 0 12px 0;
 }
 
+.last_restaurant {
+  margin-bottom: 68px;
+}
+
+/* Media query Restaurant */
+@media screen and (min-width: 1024px) {
+  .h2_restaurant {
+    padding: 30px 0 0 180px;
+    margin: 0;
+    background: #f7f7f7;
+  }
+  .container_restaurant {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 92px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 50px;
+    padding: 0 180px;
+  }
+  .container_restaurant .restaurant_selection {
+    margin: 28px 0;
+  }
+}
 /* Animation apparition restaurant */
 @keyframes apparition {
   100% {
@@ -370,6 +418,9 @@ footer ul {
 footer ul li {
   margin: 7px 0;
 }
+footer ul li:hover {
+  cursor: pointer;
+}
 footer ul .link_svg {
   display: flex;
   flex-direction: row;
@@ -382,6 +433,32 @@ footer ul .link_svg .fa-handshake {
 footer ul .footer_text_bottom {
   font-weight: 400;
 }
-footer li:hover {
-  cursor: pointer;
+
+/* Media query footer */
+@media screen and (min-width: 1024px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+  }
+  footer .logo {
+    padding-right: 50px;
+  }
+  footer ul,
+  footer .footer_text_bottom {
+    display: flex;
+    padding: 0 12px;
+  }
+  footer .link_1 {
+    padding-right: 20px;
+  }
+  footer .link_2 {
+    padding-right: 30px;
+  }
+  footer .link_3 {
+    padding-right: 20px;
+  }
+  footer .link_4 {
+    padding-right: 30px;
+  }
 }/*# sourceMappingURL=style.css.map */

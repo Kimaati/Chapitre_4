@@ -180,6 +180,7 @@ html {
   margin-top: 27px;
   display: flex;
   justify-content: center;
+  padding-bottom: 57px;
   a {
     text-decoration: none;
     color: #fff;
@@ -201,13 +202,24 @@ html {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   transition: box-shadow 0.5s;
   cursor: pointer;
+  position: absolute;
   &:hover {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-    background: linear-gradient(
-      193.33deg,
-      #9256dccc -11.44%,
-      #ff79d9c7 123.93%
-    );
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 120%;
+      height: 120%;
+      background-color: rgba(255, 255, 255, 0.801);
+      border-radius: 25%;
+      opacity: 0;
+      transition: opacity 1s linear;
+    }
+    &:hover::before {
+      opacity: 0.2;
+    }
   }
 }
 

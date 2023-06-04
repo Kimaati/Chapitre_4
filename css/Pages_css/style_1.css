@@ -70,7 +70,6 @@ header .fa-arrow-left {
   text-align: center;
 }
 .container .titre_header1 span {
-  font-size: 5rem;
   cursor: pointer;
   font-weight: 400;
   position: absolute;
@@ -88,6 +87,22 @@ header .fa-arrow-left {
           background-clip: text;
 }
 
+/* Media query Container */
+@media screen and (min-width: 1024px) {
+  .container {
+    margin: 0 12rem;
+    padding: 0 13rem;
+  }
+  .container .titre_header1 {
+    justify-content: center;
+  }
+  .container .titre_header1 .titre_page1 {
+    padding-right: 24px;
+  }
+  .container .titre_header1 span {
+    position: static;
+  }
+}
 .title {
   margin-left: 13px;
   width: 40px;
@@ -259,4 +274,33 @@ ul .footer_text_bottom {
 
 li:hover {
   cursor: pointer;
+}
+
+/* Media query footer */
+@media screen and (min-width: 1024px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+  }
+  footer .logo {
+    padding-right: 50px;
+  }
+  footer ul,
+  footer .footer_text_bottom {
+    display: flex;
+    padding: 0 12px;
+  }
+  footer .link_1 {
+    padding-right: 20px;
+  }
+  footer .link_2 {
+    padding-right: 30px;
+  }
+  footer .link_3 {
+    padding-right: 20px;
+  }
+  footer .link_4 {
+    padding-right: 30px;
+  }
 }/*# sourceMappingURL=style_1.css.map */

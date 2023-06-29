@@ -212,6 +212,9 @@ article .check_animation > i {
   opacity: 0;
   transition: 1s;
 }
+article .check_animation .fa-check-circle {
+  font-weight: 600;
+}
 article .card_checkbox {
   display: none;
 }

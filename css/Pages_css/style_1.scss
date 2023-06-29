@@ -192,6 +192,7 @@ article {
         white-space: nowrap;
         text-overflow: ellipsis;
       }
+
     }
   }
 
@@ -217,6 +218,9 @@ article {
     & > i {
       opacity: 0;
       transition: 1s;
+    }
+    .fa-check-circle {
+      font-weight: 600;
     }
   }
 

@@ -269,6 +269,15 @@ html {
         font-size: 16px;
         font-weight: 500;
       }
+
+      &:hover {
+        .fa-mobile-screen-button,
+        .fa-list-ul,
+        .fa-store {
+          color: #9356dc;
+        }
+      }
+    
       .fa-mobile-screen-button,
       .fa-list-ul,
       .fa-store {

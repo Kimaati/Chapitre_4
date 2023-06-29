@@ -257,6 +257,11 @@ html {
   font-size: 16px;
   font-weight: 500;
 }
+.choix_container .container_filters .filter:hover .fa-mobile-screen-button,
+.choix_container .container_filters .filter:hover .fa-list-ul,
+.choix_container .container_filters .filter:hover .fa-store {
+  color: #9356dc;
+}
 .choix_container .container_filters .filter .fa-mobile-screen-button,
 .choix_container .container_filters .filter .fa-list-ul,
 .choix_container .container_filters .filter .fa-store {

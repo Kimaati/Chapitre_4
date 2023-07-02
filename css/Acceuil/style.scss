@@ -15,7 +15,17 @@ html {
 
 /* Librairie */
 
-$font-fam-principal: roboto;
+$font-logo-footer: Shrikhand, sans-serif;
+
+$color-footer: #353535;
+
+/* Boutton */
+$color-linear-background-start: #9356dc;
+$color-linear-background-end: #ff79da;
+$angle : 193.33deg;
+@mixin button-background {
+  background: linear-gradient($angle, $color-linear-background-start, $color-linear-background-end);
+}
 
 /* Loader */
 
@@ -196,7 +206,7 @@ $font-fam-principal: roboto;
 
 .btn {
   padding: 13px 19px;
-  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  @include button-background;
   border-radius: 25px;
   border: none;
   font-style: normal;
@@ -453,10 +463,10 @@ $font-fam-principal: roboto;
 /* Footer */
 
 footer {
-  background-color: #353535;
+  background-color: $color-footer;
   padding-bottom: 20px;
   .logo {
-    font-family: Shrikhand, sans-serif;
+    font-family: $font-logo-footer;
     font-weight: 400;
     font-size: 18px;
     line-height: 27px;
